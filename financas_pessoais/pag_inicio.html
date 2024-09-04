@@ -1,15 +1,160 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TIVIT</title>
+    <style>
+        th {
+            color: white;
+            background-color: green;
+            border: 0;
+        }
+
+        .destaque {
+            background-color: rgb(156, 241, 156);
+        }
+
+        .valor {
+            text-align: right;
+        }
+
+        input {
+            text-align: right;
+        }
+
+        input[type=number]::-webkit-inner-spin-button {
+            appearance: none;
+        }
+    </style>
 </head>
+
 <body>
     <h1>Olá, bem vindo usuário!</h1>
     <p>Aqui você terá os valores dos seus gastos, receitas e poderá ter um relatório personalizado.</p>
+    <hr>
+    <br>
+    <table border="1">
+        <th></th>
+        <th>RECEITA</th>
+        <th></th>
+        <tr class="destaque">
+            <td>salário</td>
+            <td><input type="number" name="receita" placeholder="valor do salário"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>13º salário</td>
+            <td><input type="number" name="receita" placeholder="valor do 13º salário"></td>
+            <td></td>
+        </tr>
+        <tr class="destaque">
+            <td>total</td>
+            <td><input type="number" name="receita" placeholder="soma total dos valores"></td>
+            <td></td>
+        </tr>
+        <!-- FIM DE RECEITA -->
 
-    <a download="">Gerar/Analisar Relatório</a>
+        <th></th>
+        <th>DESPESAS FIXAS</th>
+        <th></th>
+        <tr>
+            <th>Categoria</th>
+            <th>Valor Planejado</th>
+            <th>Valor Real</th>
+        </tr>
+        <tr class="destaque">
+            <td>aluguel</td>
+            <td class="valor">1.500</td>
+            <td class="valor"><input type="number" name="real" placeholder="valor do aluguel"></td>
+        </tr>
+        <tr>
+            <td>conta de água</td>
+            <td class="valor">100</td>
+            <td class="valor"><input type="number" name="real" placeholder="valor da conta de água"></td>
+        </tr>
+        <tr class="destaque">
+            <td>conta de luz</td>
+            <td class="valor">90</td>
+            <td class="valor"><input type="number" name="real" placeholder="valor da conta de luz"></td>
+        </tr>
+        <tr>
+            <td>internet</td>
+            <td class="valor">100</td>
+            <td class="valor"><input type="number" name="real" placeholder="valor da conta de internet"></td>
+        </tr>
+        <tr class="destaque">
+            <td>mercado</td>
+            <td class="valor">500</td>
+            <td class="valor"><input type="number" name="real" placeholder="valor do gasto de mercado"></td>
+        </tr>
+        <tr>
+            <td>psicóloga</td>
+            <td class="valor">280</td>
+            <td class="valor"><input type="number" name="real" placeholder="valor da consulta psicóloga"></td>
+        </tr>
+        <tr class="destaque">
+            <td>faculdade</td>
+            <td class="valor">700</td>
+            <td class="valor"><input type="number" name="real" placeholder="valor da mensalidade"></td>
+        </tr>
+        <tr>
+            <td>total</td>
+            <td class="valor">3.270</td>
+            <td class="valor"><input type="number" name="real" placeholder="soma total"></td>
+        </tr>
+        <!-- FIM DE DESPESAS FIXAS -->
+
+        <th></th>
+        <th>DESPESAS VARIÁVEIS</th>
+        <th></th>
+        <tr>
+            <td>medicamentos</td>
+            <td class="valor">200</td>
+            <td class="valor"><input type="number" name="real" placeholder="gastos com medicamentos"></td>
+        </tr>
+        <tr class="destaque">
+            <td>delivery</td>
+            <td class="valor">150</td>
+            <td class="valor"><input type="number" name="real" placeholder="gastos com delivery"></td>
+        </tr>
+        <tr>
+            <td>beleza</td>
+            <td class="valor">120</td>
+            <td class="valor"><input type="number" name="real" placeholder="gastos com beleza"></td>
+        </tr>
+        <tr class="destaque">
+            <td>total</td>
+            <td class="valor">470</td>
+            <td class="valor"><input type="number" name="real" placeholder="soma total"></td>
+        </tr>
+        <th></th>
+        <!-- FIM DE DESPESAS VARIÁVEIS -->
+
+        <th>EXTRAS</th>
+        <th></th>
+        <tr class="destaque">
+            <td>conserto do carro</td>
+            <td class="valor">500</td>
+            <td class="valor"><input type="number" name="real" placeholder="valor do conserto"></td>
+        </tr>
+        <tr>
+            <td>total</td>
+            <td class="valor">500</td>
+            <td class="valor"><input type="number" name="real" placeholder="soma total"></td>
+        </tr>
+        <tr class="destaque">
+            <td>Total de despesas</td>
+            <td class="valor">4.240</td>
+            <td class="valor"><input type="number" name="real" placeholder="soma total de despesas"></td>
+        </tr>
+        <!-- FIM DE EXTRAS -->
+    </table>
+    <br>
+    <a href="analise/financas.pdf" download><input type="button" value="Analisar relatorio"></a>
+
 </body>
+
 </html>
