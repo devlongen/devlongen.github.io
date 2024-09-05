@@ -28,10 +28,15 @@
         input[type=number]::-webkit-inner-spin-button {
             appearance: none;
         }
+
+        #number_salario{
+            text-align: right;
+        }
     </style>
 </head>
 
 <body>
+<center>
     <h1>Olá, bem vindo usuário!</h1>
     <p>Aqui você terá os valores dos seus gastos, receitas e poderá ter um relatório personalizado.</p>
     <hr>
@@ -42,17 +47,17 @@
         <th></th>
         <tr class="destaque">
             <td>salário</td>
-            <td><input type="number" name="receita" placeholder="valor do salário"></td>
+            <td id="number_salario">5000</td>
             <td></td>
         </tr>
         <tr>
             <td>13º salário</td>
-            <td><input type="number" name="receita" placeholder="valor do 13º salário"></td>
+            <td id="number_salario">5000</td>
             <td></td>
         </tr>
         <tr class="destaque">
             <td>total</td>
-            <td><input type="number" name="receita" placeholder="soma total dos valores"></td>
+            <td id="number_salario">10000</td>
             <td></td>
         </tr>
         <!-- FIM DE RECEITA -->
@@ -154,7 +159,8 @@
     </table>
     <br>
     <a href="analise/financas.pdf" download><input type="button" value="Analisar relatorio"></a>
-
+    <a href="cadastrar.html"><input type="button" value="Cadastrar Despesas/Receitas"></a>
+</center>
 </body>
 
 </html>
